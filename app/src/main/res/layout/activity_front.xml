@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FrontActivity">
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/font2" />
+
+    <TextView
+        android:id="@+id/head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Get things done with HOLA"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/head2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head1"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:text="Make communiction easy with your family and friends use Hola. You can send and recieve message through this app. You will get amazing features."
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head2"
+        android:width="300dp"
+        android:height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#64C4F4"
+        android:text="Login"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn1"
+        android:width="300dp"
+        android:height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#64C4F4"
+        android:text="Register"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

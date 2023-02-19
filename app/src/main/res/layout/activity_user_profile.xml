@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".UserProfile">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="120dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:id="@+id/changeProfileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profile_image"
+        android:layout_marginTop="10dp"
+        android:text="Change Your Profile Image"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeProfileText"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="#9064C4F4"
+        android:drawablePadding="20dp"
+        android:hint="Name"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editBio"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/editName"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="15dp"
+        android:background="#9064C4F4"
+        android:drawablePadding="20dp"
+        android:hint="Bio"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editBio"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="17dp"
+            android:textColor="#F44336" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Female"
+            android:textSize="17dp"
+            android:textColor="#2196F3" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroups"
+        android:layout_marginTop="30dp"
+        android:width="350dp"
+        android:height="60dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#64C4F4"
+        android:text="Save"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

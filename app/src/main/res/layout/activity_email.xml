@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".EmailActivity">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#64C4F4"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:foreground="?selectableItemBackground"
+            android:id="@+id/iv_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_gravity="center_vertical"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"/>
+
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9064C4F4"
+        android:drawablePadding="20dp"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email Address"
+        android:textStyle="bold" />
+
+
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9064C4F4"
+        android:drawablePadding="20dp"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:hint="Subject"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:layout_margin="16dp"
+        android:textSize="22dp"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9064C4F4"
+        android:drawablePadding="20dp"
+        android:padding="12dp"
+        android:gravity="start"
+        android:lines="10"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="2dp"
+        android:hint="Type your message here..."
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#64C4F4"
+            android:layout_marginBottom="5dp"
+            android:text="Send" />
+
+        <Button
+            android:id="@+id/btAttachment"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="23dp"
+            android:text="attachment" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAttachment"
+        android:layout_width="match_parent"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+        android:visibility="gone" />
+
+</LinearLayout>

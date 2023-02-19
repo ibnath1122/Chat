@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProfileActivity">
+
+
+  <LinearLayout
+      android:id="@+id/action_bar"
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      android:background="#64C4F4"
+      android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:foreground="?selectableItemBackground"
+        android:id="@+id/iv_back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="profile"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
+
+
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/main_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="10dp"
+      android:background="#FFFFFF"
+      android:orientation="vertical">
+
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/profile_image"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="40dp"
+      android:src="@drawable/ic_baseline_account_circle_24"
+      app:civ_border_width="2dp"
+      app:civ_border_color="#FF000000"/>
+
+
+  <TextView
+      android:id="@+id/edit_textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@+id/profile_image"
+      android:layout_marginTop="30dp"
+      android:text="Edit Profile"
+      android:layout_marginStart="230dp"
+      android:textColor="@color/blue_500"
+      android:textSize="20dp"
+      android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+      android:background="#64C4F4"
+      android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:layout_below="@+id/edit_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:text="Name"/>
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:text="Name"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Bio"/>
+
+    <TextView
+        android:id="@+id/text_user_bio"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:text="Bio"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:text="Gender"/>
+
+    <TextView
+        android:id="@+id/text_user_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:text="Gender"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#64C4F4"
+        android:layout_marginTop="30dp"/>
+
+
+
+
+  </LinearLayout>
+
+
+
+
+
+</LinearLayout>

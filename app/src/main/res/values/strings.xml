@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Chat</string>
+    //Headings
+    <string name="heading_one">Make communication easy</string>
+    <string name="heading_two">Call and Send Email</string>
+    <string name="heading_three">Communicate with everyone</string>
+    <string name="heading_fourth">Send Message easily</string>
+    //Description
+    <string name="desc_one">Find your friends. And contact them easily through this app.</string>
+    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+</resources>

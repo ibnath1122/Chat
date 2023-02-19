@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SigninActivity">
+
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="370dp"
+        android:layout_height="240dp"
+        android:layout_below="@id/heading1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/login1" />
+
+    <TextView
+        android:id="@+id/heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Welcome back!!"
+        android:textColor="@color/black"
+        android:textSize="29dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ly1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="7dp"
+            android:background="#9064C4F4"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="20dp"
+            android:hint="Email"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="400dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/emailEditText"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="15dp"
+            android:background="#9064C4F4"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="20dp"
+            android:hint="Password"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Password"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:id="@+id/showpassword"/>
+
+
+
+        <TextView
+            android:id="@+id/recoverPassTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="10dp"
+            android:text="Forget Password"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:width="350dp"
+            android:height="60dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#64C4F4"
+            android:text="login"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:cornerRadius="20dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ly1"
+        android:id="@+id/ly2"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="@color/black"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" SignUp"
+            android:id="@+id/txt_signup"
+            android:textSize="17dp"
+            android:textColor="#64C4F4"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
