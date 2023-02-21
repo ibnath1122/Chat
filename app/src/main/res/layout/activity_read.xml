@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReadActivity">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/overview"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="This app is an efficient app for day to day life chat support. It enables you to send and receive messages. Chatting apps make it easier, simpler, and faster to connect with everyone and it is also easy to use. There are many types of chatting apps and everyone has its own format, design, and functions. There is a text box where you type messages and another text box where all the previous messages in the conversation are shown along with the timelines. There is a button to send the message, receive message and also send images. The app has features like Intro, Login, Registration, Forgot password , Email Authentication, Users , Settings , update profile, delete profile, change profile image, calling, sending emails, share app etc.
+                                                                                                It makes getting to know a person easier and this is a user friendly app anyone can use this app. Chatting is a text-based app helps us to communicate with people that is live or in real-time. For example, when talking to someone in chat any typed text is received by other participants immediately. The main purpose of the software is to provide users with an instant messaging tool that has the ability to handle millions of users simultaneously when needed and can be easily done. The application is designed as a web application. And we also assure that the app secures enough privacy for their users. There is a login page only those who have proper identification can enter. We also built signup/register page for new users. If anyone forgot his password, he/she can access his account with a secured process. Also email authentication process to authenticate user email.
+                                                                                                Some features are available in this app. Those are: Intro, Login, Signup Forgot Password, Main frame, Settings, send image, call, email, delete profile, share app. The app has Intro page. We can log in using our preregistered account. If we don’t have an account we can sign up to make an account. If someone forgets his password, they can reset it. We can change background. Deleting text is also a great feature. Main features are to send real-time message, images, reacts to a message. If a message or image sent to a person the app will automatically show a popup message to the screen which called notification bar. Database: For database, we are using Firebase.
+App Specification:
+Language: Java
+Platform: Android Studio
+Version: Dolphin 2021.3.1
+API Level: 21; Android 13
+
+"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:textAlignment="textStart"/>
+
+
+
+
+
+
+
+</ScrollView>
