@@ -3,21 +3,37 @@ package com.example.chat;
 
 public class MessageModel {
 
-    String from, message;
+    String from;
+    String uId, message , messageId;
     Long msTime;
 
-
-    /*public MessageModel() {
-
+    public MessageModel(String uId, String message, Long msTime){
+        this.uId = uId;
+        this.message = message;
+        this.msTime = msTime;
     }
 
-    public MessageModel(String from, String message, Long msTime)
-    {
-        this.from=from;
-        this.message=message;
-        this.msTime = msTime;
+    public MessageModel (String uId , String message){
+        this.uId = uId;
+        this.message  = message ;
+    }
 
-    }*/
+    public MessageModel(){}
+
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {this.uId = uId;}
 
     public String getFrom()
     {

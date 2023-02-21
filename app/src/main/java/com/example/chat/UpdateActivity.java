@@ -86,7 +86,7 @@ public class UpdateActivity extends AppCompatActivity {
                 //Picasso.get().load(image).into(setting_image);
 
                 Picasso
-                        .with(getApplicationContext())
+                        .get()
                         .load(image)
                         .error(R.drawable.ic_baseline_account_circle_24)
                         .into(setting_image);

@@ -2,20 +2,24 @@ package com.example.chat;
 
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable; //--
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri; //--
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.chat.adapter.ChatAdapter;
 import com.example.chat.adapter.UserAdapter;
+import com.example.chat.databinding.ActivityChatBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,12 +30,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.net.URI;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChatActivity extends AppCompatActivity {
 
+    ActivityChatBinding binding;
     private Intent getIntent;
     private CircleImageView profileImage;
     private TextView textViewUserName;
@@ -44,6 +50,12 @@ public class ChatActivity extends AppCompatActivity {
     private ValueEventListener eventListener;
     private ArrayList<MessageModel> messageList;
     private ChatAdapter chatAdapter;
+    //String receiveId;
+    ImageButton  cambtn;
+    Uri uri;
+    private static final int PICK_IMAGE=1;
+    private char receivername;
+
 
 
 
@@ -59,6 +71,8 @@ public class ChatActivity extends AppCompatActivity {
         messageEditText=findViewById(R.id.edit_text_message);
         ivBack=findViewById(R.id.iv_back);
         ivSendMessage=findViewById(R.id.iv_send_message);
+        //receiveId=getIntent().getStringExtra("uId");
+        cambtn=findViewById(R.id.cam_sendmsg);
 
 
         getIntent=getIntent();
@@ -101,12 +115,47 @@ public class ChatActivity extends AppCompatActivity {
 
         fetchMessage();
 
+        cambtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent,PICK_IMAGE);
+
+
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==PICK_IMAGE && resultCode==RESULT_OK||data!=null||data.getData()!=null)
+        {
+            uri=data.getData();
+            String url=uri.toString();
+            Intent intent=new Intent(ChatActivity.this,SendImageActivity.class);
+            intent.putExtra("u",url);
+            intent.putExtra("n",receivername);
+            intent.putExtra("ruid",receiverUID);
+            intent.putExtra("suid",senderUID);
+            startActivity(intent);
+
+        }else {
+            Toast.makeText(this," No File Selected ",Toast.LENGTH_SHORT).show();
+
+        }
+
+
     }
 
     private void userInfo()
     {
         Picasso
-                .with(getApplicationContext())
+                .get()
                 .load(getIntent.getStringExtra(UserAdapter.SENDER_IMAGE_URL_KEY))
                 .error(R.drawable.ic_baseline_account_circle_24)
                 .into(profileImage);
@@ -160,6 +209,7 @@ public class ChatActivity extends AppCompatActivity {
                     for(DataSnapshot dataSnapshot : snapshot.getChildren())
                     {
                         MessageModel message=dataSnapshot.getValue(MessageModel.class);
+                        message.setMessageId(snapshot.getKey());
                         messageList.add(message);
                     }
                     chatAdapter.notifyDataSetChanged();

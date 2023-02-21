@@ -60,9 +60,10 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.gridlayout:gridlayout:1.0.0"
     implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
-// For developers using the Android Support Library
-    implementation 'pub.devrel:easypermissions:2.0.1'
+
+
 
 
 

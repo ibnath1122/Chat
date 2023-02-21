@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleObserver
     private void setProfileImageView(String imageUrl)
     {
         Picasso
-                .with(getApplicationContext())
+                .get()
                 .load(imageUrl)
                 .error(R.drawable.ic_baseline_account_circle_24)
                 .into(profileImageView);

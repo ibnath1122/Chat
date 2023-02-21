@@ -12,11 +12,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class FrontActivity extends AppCompatActivity {
 
     private Button button1;
     private Button button2;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,16 @@ public class FrontActivity extends AppCompatActivity {
 
                 Intent intent=new Intent(FrontActivity.this, SigninActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        textView = (TextView) findViewById(R.id.read);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FrontActivity.this, ReadActivity.class);
+                startActivity(intent);
+
             }
         });
 

@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="profile"
+        android:text="Profile"
         android:textColor="@color/black"
         android:layout_gravity="center_vertical"
         android:textSize="18dp"
@@ -69,7 +69,7 @@
       android:layout_below="@+id/profile_image"
       android:layout_marginTop="30dp"
       android:text="Edit Profile"
-      android:layout_marginStart="230dp"
+      android:layout_marginStart="150dp"
       android:textColor="@color/blue_500"
       android:textSize="20dp"
       android:textStyle="bold"/>
@@ -88,7 +88,9 @@
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:textColor="@color/black"
-        android:text="Name"/>
+        android:text="Name"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/text_user_name"
@@ -99,13 +101,15 @@
         android:textColor="@color/black"
         android:text="Name"
         android:textSize="18dp"
-        android:textStyle="bold"/>
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
         android:textColor="@color/black"
         android:text="Bio"/>
 
@@ -114,12 +118,11 @@
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginLeft="30dp"
         android:textColor="@color/black"
         android:text="Bio"
         android:textSize="18dp"
-        android:textStyle="bold"/>
+        />
 
 
     <TextView
@@ -128,6 +131,8 @@
         android:layout_marginLeft="30dp"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
         android:text="Gender"/>
 
     <TextView
@@ -137,9 +142,9 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="30dp"
         android:text="Gender"
-        android:textColor="@color/black"
         android:textSize="18dp"
-        android:textStyle="bold"/>
+        android:textColor="@color/black"
+        />
 
     <View
         android:layout_width="match_parent"

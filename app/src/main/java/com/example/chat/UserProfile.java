@@ -152,7 +152,7 @@ public class UserProfile extends AppCompatActivity {
             {
                 imageUri=data.getData();
                 Picasso
-                        .with(getApplicationContext())
+                        .get()
                         .load(imageUri)
                 .into(profile_image);
 

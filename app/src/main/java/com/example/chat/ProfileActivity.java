@@ -137,7 +137,7 @@ public class ProfileActivity extends AppCompatActivity {
     private void setUserData(UserModel model)
     {
         Picasso
-                .with(getApplicationContext())
+                .get()
                 .load(model.getImageUri())
                 .error(R.drawable.ic_baseline_account_circle_24)
                 .into(profileImage);

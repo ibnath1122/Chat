@@ -53,7 +53,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
         UserModel model = userArrayList.get(position);
         Picasso
-                .with(context)
+                .get()
                 .load(model.getImageUri())
                 .error(R.drawable.ic_baseline_account_circle_24)
                 .into(holder.userImageView);

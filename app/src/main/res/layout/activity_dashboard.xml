@@ -54,12 +54,12 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_baseline_message_24"/>
+                    android:src="@drawable/ic_baseline_share_24"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Chat"
+                    android:text="Share"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textAlignment="center"
@@ -303,12 +303,12 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_baseline_add_ic_call_24"/>
+                    android:src="@drawable/ic_baseline_settings_24"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Call"
+                    android:text="Settings"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textAlignment="center"

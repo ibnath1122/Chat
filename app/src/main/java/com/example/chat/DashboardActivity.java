@@ -1,8 +1,10 @@
 package com.example.chat;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +12,11 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardActivity extends AppCompatActivity{
 
@@ -50,8 +56,10 @@ public class DashboardActivity extends AppCompatActivity{
 
                     if(finalI==0)
                     {
-                        Intent intent= new Intent(DashboardActivity.this, MainActivity.class);
-                        startActivity(intent);
+                        //Intent intent= new Intent(DashboardActivity.this, MainActivity.class);
+                        //startActivity(intent);
+                        ShareApp(DashboardActivity.this);
+
                     }
 
                     else if(finalI==1)
@@ -73,8 +81,12 @@ public class DashboardActivity extends AppCompatActivity{
 
                     else if(finalI==3)
                     {
-                        Intent intent= new Intent(DashboardActivity.this, DeleteProfileActivity.class);
-                        startActivity(intent);
+                        /*Intent intent= new Intent(DashboardActivity.this, DeleteProfileActivity.class);
+                        startActivity(intent);/*
+                         */
+                        doDeleteCurrentUser();
+
+
                     }
 
                     else if(finalI==4)
@@ -91,7 +103,7 @@ public class DashboardActivity extends AppCompatActivity{
 
                     else if(finalI==6)
                     {
-                        Intent intent= new Intent(DashboardActivity.this, CallActivity.class);
+                        Intent intent= new Intent(DashboardActivity.this, UpdateActivity.class);
                         startActivity(intent);
                     }
 
@@ -108,6 +120,47 @@ public class DashboardActivity extends AppCompatActivity{
                 }
             });
         }
+    }
+
+    private void doDeleteCurrentUser() {
+        FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child("users")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .setValue(null)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        FirebaseAuth.getInstance().getCurrentUser().delete()
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful())
+                                        {
+                                            Toast.makeText(DashboardActivity.this, "Delete successful", Toast.LENGTH_SHORT).show();
+                                            Intent intent=new Intent(DashboardActivity.this, SigninActivity.class);
+                                            startActivity(intent);
+                                        }
+                                        else
+                                        {
+
+                                            Toast.makeText(DashboardActivity.this, "Try Again", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                    }
+                });
+    }
+
+    private void ShareApp(Context context)
+    {
+        final String appPakageName = context.getPackageName();
+        Intent sendIntent= new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Download Now: https://play.google.com/store/apps/details?id=" + appPakageName);
+        sendIntent.setType("text/plain");
+        context.startActivity(sendIntent);
     }
 
 

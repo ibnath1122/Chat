@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/profile_image"
         android:layout_marginTop="10dp"
-        android:text="Change Your Profile Image"
+        android:text="Change Your Profile Picture"
         android:textColor="@color/black"
         android:textSize="15dp" />
 
